@@ -1,9 +1,16 @@
-import React, {Component} from 'react'
+import React from 'react'
+import Employee from './Employee'
 
-function AllEmployees(){
+function AllEmployees(props){
     return(
         <div>
-            All Employees!
+            {props.filteredEmployees.map(employee => {
+                return <Employee
+                            key={employee.id}
+                            employee={employee}
+                            selectEmployee={props.selectEmployee}
+                        />
+            })}
         </div>
     )
 }
