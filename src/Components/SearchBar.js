@@ -32,8 +32,8 @@ class SearchBar extends Component {
             <div>
                 <select value={this.state.filterKey} onChange={this.selectFilterKey} name='filterKey'>
                     <option value=''>Select Category</option>
-                    <option value='firstName'>First Name</option>
-                    <option value='lastName'>Last Name</option>
+                    <option value='first'>First Name</option>
+                    <option value='last'>Last Name</option>
                     <option value='email'>Email</option>
                     <option value='gender'>Gender</option>
                 </select>

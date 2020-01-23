@@ -6,8 +6,8 @@ class EmployeeHighlights extends Component {
 		super(props);
 		console.log(props);
 		this.state = {
-			firstNameInput: props.firstName,
-			lastNameInput: props.lastName,
+			firstNameInput: props.first,
+			lastNameInput: props.last,
 			emailInput: props.email,
 			genderInput: props.gender,
 			id: props.id,
@@ -17,11 +17,11 @@ class EmployeeHighlights extends Component {
 	}
 
 	componentDidUpdate(prevProps) {
-		if (prevProps.firstName !== this.props.firstName) {
+		if (prevProps.firstName !== this.props.first) {
             console.log('HIt Update!')
 			this.setState({
-				firstNameInput: this.props.firstName,
-				lastNameInput: this.props.lastName,
+				firstNameInput: this.props.first,
+				lastNameInput: this.props.last,
 				emailInput: this.props.email,
 				genderInput: this.props.gender,
 				id: this.props.id,
